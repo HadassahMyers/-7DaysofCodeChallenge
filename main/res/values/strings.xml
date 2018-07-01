@@ -1,0 +1,78 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title of the app. [CHAR LIMIT=18] -->
+    <string name="app_name">Quiz App</string>
+
+    <!-- Hint text display in the empty field [CHAR LIMIT=20] -->
+    <string name="insulin">i _ _ _ _ _ n</string>
+
+    <!-- Text for 1st question [CHAR LIMIT=NONE] -->
+    <string name="question1">Type 1 Diabetes is:</string>
+
+    <!-- Text for 2nd question [CHAR LIMIT=NONE] -->
+    <string name="question2">Which of these sugar readings are in-range?</string>
+    <!-- Text for 3rd question [CHAR LIMIT=NONE] -->
+    <string name="question3">What do you inject when your sugar is too high?</string>
+    <!-- Text for 4th question [CHAR LIMIT=NONE] -->
+    <string name="question4">Which of these food groups most affects sugar levels?</string>
+
+    <!-- Text for 5th question [CHAR LIMIT=NONE] -->
+    <string name="question5">Select which of these can affect sugar levels?</string>
+
+    <!-- Question 5 option 1  [CHAR LIMIT=20] -->
+    <string name="Q5Op1">Food</string>
+
+    <!-- Question 5 option 2  [CHAR LIMIT=20] -->
+    <string name="Q5Op2">Excercise</string>
+
+    <!-- Question 5 option 3  [CHAR LIMIT=20] -->
+    <string name="Q5Op3">Reading</string>
+
+
+    <!-- Hint text display in the empty field  [CHAR LIMIT=5] -->
+    <string name="done">DONE</string>
+
+
+    <!-- Submit Button for Questions  [CHAR LIMIT=20] -->
+    <string name="score">Score</string>
+
+
+    <!--
+      Name for the score summary. It will be shown in the format of "Total: Score"  [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summary_insulin">Insulin: <xliff:g example="Amy" id="insulin">%s</xliff:g></string>
+
+    <!--
+      Question 5,#1 for the score summary. It will be shown in the format of
+      "Food checked? true" or "Food checked? false". [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summary_Q5_fo">Food Checked? +1 point <xliff:g example="true" id="Q5_food1">%b</xliff:g></string>
+
+    <!--
+        Question 5,#2 for the score summary. It will be shown in the format of
+      "Excercise checked? true" or "Excercise checked? false". [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summary_Q5_ex">Excercise Checked? +1 point <xliff:g example="true" id="Q5_Excercise2">%b</xliff:g></string>
+
+
+    <!--
+    Question 5,#3 for the score summary. It will be shown in the format of
+  "Reading checked? true" or "Reading checked? false". [CHAR LIMIT=NONE]
+-->
+
+    <string name="order_summary_Q5_re">Reading Checked? No points <xliff:g example="true" id="Q5_Reading3">%b</xliff:g></string>
+
+    <!--
+     Points for particular question. It will be shown in the format of
+      "Score: 1", where 1 is the number of points scored for that one. [CHAR LIMIT=20]
+    -->
+
+    <string name="order_summary_points">Points : <xliff:g example="1" id="points">%s</xliff:g></string>
+
+
+    <!--
+      Total points of current score It will be shown in the format of
+      "Total: 5" where 5 is the total score. [CHAR LIMIT=20]
+    -->
+    <string name="order_summary_score">Score: <xliff:g example="6" id="score">%d</xliff:g></string>
+
+</resources>

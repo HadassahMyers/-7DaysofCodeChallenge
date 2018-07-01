@@ -1,0 +1,372 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:paddingTop="4dp">
+
+        <!--logo-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <!-- Start 1st Question content -->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#ED5665">
+
+            <TextView
+                style="@style/QuestionTextStyle"
+                android:text="@string/question1" />
+
+        </LinearLayout>
+
+        <!-- Answer 1st Question Radio Button Options -what cuases T1D -->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#ED5665">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/wrong_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="from too much sugar"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <RadioButton
+                    android:id="@+id/right_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="auto-immune disease"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- End 1st Question content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ED5665"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+
+            <!--view to feedback once user has finished  question 1-->
+            <Button
+                android:id="@+id/score_text_view1"
+                android:layout_width="96dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rounded"
+                android:onClick="CalcScore1Show"
+                android:text="@string/done"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+        <!-- Start 2nd Question content -->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#46387F">
+
+            <TextView
+                style="@style/QuestionTextStyle"
+                android:text="@string/question2"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- answer 2nd Question buttons-->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#46387F"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/in_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="rangeYes"
+                android:src="@drawable/glucm1" />
+
+            <ImageButton
+                android:id="@+id/outOf_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="rangeNo"
+                android:src="@drawable/glucm2" />
+
+        </LinearLayout>
+
+        <!-- End 2nd Question content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#46387F"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+            <!--view to feedback once user has finished  question 2-->
+            <Button
+                android:id="@+id/score_text_view2"
+                android:layout_width="96dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rounded"
+                android:onClick="CalcScore2Show"
+                android:text="@string/done"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+        <!-- Start 3rd Question content -->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#A1CF68">
+
+            <!-- What do you inject when your sugar is too high?-->
+
+            <TextView
+                style="@style/QuestionTextStyle"
+                android:text="@string/question3" />
+        </LinearLayout>
+
+        <!-- Answer input text for 3rd input answer (insulin)-->
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#A1CF68">
+
+            <EditText
+                android:id="@+id/insulin_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/insulin"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <!-- End 3rd Question content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A1CF68"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+            <!--view to feedback once user has finished  question 3-->
+            <Button
+                android:id="@+id/score_text_view3"
+                android:layout_width="96dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rounded"
+                android:onClick="CalcScore3Show"
+                android:text="@string/done"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+        <!-- Start 4th Question content -->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#46387F">
+
+            <TextView
+                style="@style/QuestionTextStyle"
+                android:text="@string/question4"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <!--Answer for 4th Question-->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#46387F"
+            android:orientation="horizontal">
+
+            <!--buttons for answer to question 4-->
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="chickenClick"
+                android:src="@drawable/chicken" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="pizzaClick"
+                android:src="@drawable/pizza" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="saladClick"
+                android:src="@drawable/salad" />
+
+        </LinearLayout>
+
+        <!-- End 4th Question content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#46387F"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+            <!--view to feedback once user has finished  question 4-->
+            <Button
+                android:id="@+id/score_text_view4"
+                android:layout_width="96dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rounded"
+                android:onClick="CalcScore4Show"
+                android:text="@string/done"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+        <!-- Start 5th Question content -->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#FECE56">
+
+            <TextView
+                style="@style/QuestionTextStyle"
+                android:text="@string/question5" />
+
+        </LinearLayout>
+
+        <!--answer 5th Question-->
+
+        <LinearLayout
+            style="@style/WrapperBox"
+            android:background="#FECE56"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/question5_one_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="@string/Q5Op1"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/question5_two_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="@string/Q5Op2"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/question5_three_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="@string/Q5Op3"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- End 5th Question content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FECE56"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+            <!--view to feedback once user has finished  question 5-->
+            <Button
+                android:id="@+id/score_text_view5"
+                android:layout_width="96dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rounded"
+                android:onClick="CalcScore5Show"
+                android:text="@string/done"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+
+        <!--FINAL SCORE CHECK-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="CalcScore"
+            android:text="@string/score" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
